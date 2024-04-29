@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/bootstra-rtl/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/Main.css" rel="stylesheet">
+    <link href="css/Responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-12 col-lg-1 ms-md-auto px-md-4 sidebar vh-100">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <div class="circle"></div>
+                                <span>انشاء معايير الاستهداف</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content area -->
+            <main role="main" class="col-md-11 me-md-auto p-0   main">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 ps-5 px-3 pb-2  border-bottom">
+                    <div>
+                        <h1 class="d-inline-block">انشاء معايير الاستهداف</h1>
+                        <a class="d-inline-block mx-2 AddCriteria" href="#">انشاء معيار جديد</a>
+                    </div>
+                    <div class="d-flex">
+                        <div class="bell">
+                            <i class="fa fa-regular fa-bell"></i>
+                        </div>
+                        <div class="profile-container">
+                            <img src="images/Screenshot 2024-04-28 175850.png" class="profile-image">
+                            <div class="online-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-9 col-12 col-9 ps-5">
+                            <div class="CerterialSerach">
+                                <div class="container-fluid p-0">
+                                    <span class="d-inline me-2">اسم المعيار</span>
+                                    <input type="text" class="form-control d-inline"
+                                        placeholder="اسم المعيار هنا...">
+                                </div>
+                                <div class="searchbuttons">
+                                    <a href="" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
+                                    <a href="" class="arrow-left"><i class=" fa fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="Content">
+                                <div class="Criteria-intro-title">
+                                    <h4> قواعد المعيار</h4>
+                                </div>
+                                <div class="Criteria-tree">
+                                    <div class="level1">
+                                    <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z" stroke="#76737C" stroke-width="1.5"/>
+                                        </svg>
+
+                                        <div  class="ANDstatus d-inline-block">
+                                            <h4 class="d-inline-block">و</h4>
+                                            <h4 class="d-inline-block">: مستوفي كافة الشروط: </h4>
+                                           
+                                        </div>
+                                        <ul class="AndStatusDropdown">
+                                            <li>اذن التسليم - Delivery order <a  href="#" class="lightpurplesyle "><span>ضمن نطاق</span></a>النوع (فاتورة استيراد، فاتورة تصدير)</li>
+                                            <li>اذن التسليم - Delivery order <a  href="#"class="yellowstyle "><span>مقارن نصوص</span></a>العملة (NOT_Equal_un المعرفة، [الدولار الأمريكي، الدرهم الإماراتي، اليورو])</li>
+                                            <li>اذن التسليم - Delivery order <a  href="#" class="lighgreenstyle  "><span>ضمن مجموعة</span></a>بلد المنشأ (Black_list,لايتم-الاستلام-منها)</li>
+
+                                        </ul>
+                                        <div class="level2">
+                                            <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z" stroke="#76737C" stroke-width="1.5"/>
+                                                </svg>
+        
+                                                <div  class="ORstatus d-inline-block">
+                                                    <h4 class="d-inline-block">أو</h4>
+                                                    <h4 class="d-inline-block">مستوفي أي من الشروط: </h4>
+                                                   
+                                                </div>
+                                                <ul class="ORStatusDropdown">
+                                                    <li>بنود بوليصة الشحن - HBItems <a  href="#" class="greenstyle "><span>مُنشئ التعبيرات الثابتة</span></a>Base_shipping، بلد_المنشأ ([5,000، سوريا] - [20,000، لبنان] - [880,551، الأردن] )</li>
+                                                    <li>اذن التسليم - Delivery order <a  href="#"class="lighgreenstyle "><span>ضمن مجموعة</span></a>بلد المنشأ (Black_list,لايتم-الاستلام-منها)</li>        
+                                                </ul> 
+
+                                                <div class="level3">
+                                                    <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z" stroke="#76737C" stroke-width="1.5"/>
+                                                        </svg>
+                
+                                                        <div  class="NOTstatus d-inline-block">
+                                                            <h4 class="d-inline-block">ليس</h4>
+                                                            <h4 class="d-inline-block">:  لا تستوفي أي من الشروط  </h4>
+                                                           
+                                                        </div>
+                                                        <ul class="NOTStatusDropdown">
+                                                            <li>اذن التسليم - Delivery order <a class="lightblue" href="#"><span><i class="fa fa-bars" aria-hidden="true"></i>
+                                                                يساوي</span></a>العملة  ("ليرة")</li>
+                                                        </ul> 
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative"></div>
+                                <div class="Dashbored-buttons">
+                                    <ul>
+                                        <li class="close"><a href=""><i class="fas fa-circle-xmark ms-2"></i>إغلاق</a></li>
+                                        <li class="reload"><a href=""><i class="fas fa-arrows-rotate ms-2"></i> إعادة تحميل المعيار</a></li>
+                                        <li class="New" data-bs-toggle="modal" data-bs-target="#exampleModal" ><a  ><i class="fas fa-plus ms-2"></i>(List popup)  إنشاء جديد</a></li>
+                                        <li class="save"><a href=""><i class="fas fa-floppy-disk ms-2"></i> حفظ</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-lg-3 col-12 graybg ">
+                            <div class="rightnav mt-5  ms-3">
+                                <a  class="New mt-3" ><i class="fas fa-plus ms-2"></i> إنشاء معيار جديد</a>
+
+                            <div class="CerterialActions mt-5  ">
+                                <div class="CrticalTitle  mb-4">
+                                    <h5>الإجراء على قاعدة المعيار </h5>
+                                </div>
+                                <div class="CerterialActionsBtns">
+                                    <div class="actiobtn">
+                                        <a href="#"><i class="fa fa-copy"></i> نسخ</a>
+                                
+                                    </div>
+                                    <div class="actiobtn">
+                                        <a href="#"><i class="fa fa-paste"></i> لصق</a>
+                                
+                                    </div>
+                                    <div class="actiobtn">
+                                        <a href="#"><i class="fa fa-pencil"></i> تعديل</a>
+                                
+                                    </div>
+                                    <div class="actiobtn">
+                                        <a href="#"><i class="fa fa-scissors"></i> قص</a>
+                                
+                                    </div>
+                                    <div class="actiobtn">
+                                        <a href="#"><i class="fa fa-trash"></i> حذف</a>
+                                
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <div class="criteriarules">
+                                <h5>قم بالسحب والافلات لإنشاء قاعدة المعيار</h5>
+                                <div class="card mt-3">
+                                    <div class="card-body p-0">
+                                        <h4>المعاملات المنطقية</h4>
+                                        <p>قم بالسحب والافلات داخل مربع قواعد المعيار حيث تريد</p>
+                                        <div class="logicalopeators">
+                                            <ul>
+                                                <li class="purplestyle"><a clas href="#"><span>و</span></a></li>
+                                                <li class="greenstyle"><a href="#"><span>أو</span></a></li>
+                                                <li class="redstyle"><a href="#"><span>ليس</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="criteriarules">
+                                <div class="card mt-3">
+                                    <div class="card-body p-0">
+                                        <h4>مقارنة مع قيم متعددة</h4>
+                                        <p>قم بالسحب والافلات داخل مربع قواعد المعيار حيث تريد</p>
+                                        <div class="multivaluelopeators">
+                                            <ul>
+                                                <li class="lightpurplesyle mb-2"><a  href="#"><span>ضمن نطاق</span></a></li>
+                                                <li class="lighgreenstyle mb-2"><a href="#"><span>مُنشئ التعبيرات الثابتة</span></a></li>
+                                                <li class="yellowstyle mb-2"><a href="#"><span>مقارن نصوص</span></a></li>
+                                                <li class="greenstyle mb-2"><a href="#"><span>ضمن مجموعة</span></a></li>
+ 
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="criteriarules">
+                                <div class="card mt-3">
+                                    <div class="card-body p-0">
+                                        <h4>مقارنة بسيطة</h4>
+                                        <p>قم بالسحب والافلات داخل مربع قواعد المعيار حيث تريد</p>
+                                        <div class="SimpleCompareopeators">
+                                            <ul>
+                                                <li class="lightblue mb-2"><a  href="#"><span><i class="fa fa-bars me-2" aria-hidden="true"></i>
+                                                    يساوي</span></a></li>
+                                                <li class="lightblue mb-2"><a href="#"><span><i class="fas fa-greater-than me-2"></i></i>
+                                                    أكبر من</span></a></li>
+                                                <li class="lightblue mb-2"><a href="#"><span><i class="fas fa-less-than me-2"></i> اقل من</span></a></li>
+                                                
+
+                                            </ul>
+                                            <ul>
+                                                <li class="lightblue mb-2"><a href="#"><span><i class="fas fa-not-equal me-2"></i> لا يساوي</span></a></li>
+                                                <li class="lightblue mb-2"><a href="#"><span> <i class="fas fa-greater-than-equal me-2"> </i>أكبر من او يساوي</span></a></li>
+                                                <li class="lightblue mb-2"><a href="#"><span><i class="fas fa-less-than-equal me-2"></i> اقل من او يساوي</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">أضف "ضمن قائمة"</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="sidebar-box search-form-wrap">
+                            <form action="#" class="search-form">
+                              <div class="form-group">
+                                <label>الحقل  </label>
+                                <svg width="440" height="40" viewBox="0 0 440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.927 25.04L32.4001 28.4M23.4001 15.2C25.3883 15.2 27.0001 16.8118 27.0001 18.8M31.2801 19.44C31.2801 23.7699 27.77 27.28 23.4401 27.28C19.1102 27.28 15.6001 23.7699 15.6001 19.44C15.6001 15.1101 19.1102 11.6 23.4401 11.6C27.77 11.6 31.2801 15.1101 31.2801 19.44Z" stroke="#494450" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                                                    <input type="text" class="form-control" id="s" placeholder="ابحث هنا...">
+                              </div>
+                            </form>
+                            <hr> 
+                            <div class="Feilds-dropdown ms-2">
+                                <i class="fas fa-chevron-down"></i>
+                                <h4>اذن التسليم - Delivery order</h4>
+                                <ul>
+                                    <li><a href="">نوع الفاتورة</a></li>
+                                    <li><a href="">بلد/المنطقة</a></li>
+                                    <li ><a class="selected" href="">العملة</a></li>
+                                    <li><a href="">النوع</a></li>
+
+                                    
+                                </ul>
+                            </div>
+                            <div class="Feilds-dropdown ms-2">
+                                <i class="fas fa-chevron-down"></i>
+                                <h4 >بنود بوليصة الشحن - HBItems </h4>
+                                <ul>
+                                    <li><a href="">العلامة التجارية</a></li>
+                                 
+
+                                    
+                                </ul>
+                            </div>
+                          </div>
+
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="sidebar-box search-form-wrap">
+                            <form action="#" class="search-form">
+                              <div class="form-group">
+                                <label>القائمة </label>
+                                <svg width="440" height="40" viewBox="0 0 440 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.927 25.04L32.4001 28.4M23.4001 15.2C25.3883 15.2 27.0001 16.8118 27.0001 18.8M31.2801 19.44C31.2801 23.7699 27.77 27.28 23.4401 27.28C19.1102 27.28 15.6001 23.7699 15.6001 19.44C15.6001 15.1101 19.1102 11.6 23.4401 11.6C27.77 11.6 31.2801 15.1101 31.2801 19.44Z" stroke="#494450" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                                                    <input type="text" class="form-control" id="s" placeholder="ابحث هنا...">
+                              </div>
+                            </form>
+                            <hr>
+<div class="listcheckboxes">
+    <div class="form-check">
+        <input class="form-check-input" checked type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            ليرة سورية
+                </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        <label class="form-check-label" for="flexCheckChecked">
+            الدولار الأمريكي      </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            درهم اماراتي        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            يورو       </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            يورو       </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            ليرة لبناني      </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            الدولار الأمريكي       </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            درهم اماراتي      </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+            دينار عراقي </label>
+      </div>
+</div>
+
+                          </div>
+                    </div>
+            </div>
+            <hr style="margin-top: -60px;">
+            <div class="selectedcurrencey">
+                <h3> تم تحديد “العملة” من القائمة التالية:</h3>
+                <div class="selectedcurrenceylist">
+                    <ul>
+                        <li><a href="#">ليرة سورية <i class="fas fa-xmark  mx-2"></i></a></li>
+                        <li><a href="#">الدولار الأمريكي <i class="fas fa-xmark mx-2"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+              
+                <div>
+                  <button type="button" class="btn btn-primary Reset">إعادة تعيين</button>
+                </div>
+                <div >
+                  <button type="button" class="btn btn-link" data-bs-dismiss="modal">إلغاء</button>
+                  <button type="button" class="btn btn-primary" style="background-color: #2E5DD0;border: 1px solid transparent !important;">إضافة</button>
+              </div>
+          
+                      </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://use.fontawesome.com/724b973dd5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

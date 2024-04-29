@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/Main.css" rel="stylesheet">
+    <link href="css/Responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-12 col-lg-1 ms-md-auto px-md-4 sidebar vh-100">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <div class="circle"></div>
+                                <span>Criteria Builder</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main content area -->
+            <main role="main" class="col-md-11 ms-md-auto p-0   main">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 ps-5 px-3 pb-2  border-bottom">
+                    <div>
+                        <h1 class="d-inline-block">Criteria Builder</h1>
+                        <a class="d-inline-block mx-2 AddCriteria" href="#">Add New Criteria name</a>
+                    </div>
+                    <div class="d-flex">
+                        <div class="bell">
+                            <i class="fa fa-regular fa-bell"></i>
+                        </div>
+                        <div class="profile-container">
+                            <img src="images/Screenshot 2024-04-28 175850.png" class="profile-image">
+                            <div class="online-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-9 col-12 col-9 ps-5" style="    max-height: 100vh;
+                        min-height: 100vh;">
+                            <div class="CerterialSerach">
+                                <div class="container-fluid p-0">
+                                    <span class="d-inline me-2">Criteria name</span>
+                                    <input type="text" class="form-control d-inline"
+                                        placeholder="Criteria name here...">
+                                </div>
+                                <div class="searchbuttons">
+                                    <a href="" class="arrow-left"><i class=" fa fa-arrow-left"></i></a>
+                                    <a href="" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="Content">
+                                <div class="Criteria-intro-title">
+                                    <h4>Criteria rules</h4>
+                                </div>
+                                <div class="Criteria-tree">
+                                    <div class="level1">
+                                        <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z"
+                                                stroke="#76737C" stroke-width="1.5" />
+                                        </svg>
+
+                                        <div class="ANDstatus d-inline-block">
+                                            <h4 class="d-inline-block">And</h4>
+                                            <h4 class="d-inline-block">: Meet all conditions </h4>
+
+                                        </div>
+                                        <ul class="AndStatusDropdown">
+                                            <li>Commercials-invoice <a href="#"
+                                                    class="lightpurplesyle "><span>In_List</span></a>type (Import Bill,
+                                                Export Bill)</li>
+                                            <li>Commercials-invoice <a href="#"
+                                                    class="yellowstyle "><span>String_comparer</span></a>Currency
+                                                (NOT_Equal_undefined, [USD, AED, EUR])</li>
+                                            <li>Commercials-invoice <a href="#"
+                                                    class="lighgreenstyle  "><span>In_Group</span></a>Country-of-origin
+                                                (Black_list, لايتم-الاستلام-منها)</li>
+
+                                        </ul>
+                                        <div class="level2">
+                                            <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z"
+                                                    stroke="#76737C" stroke-width="1.5" />
+                                            </svg>
+
+                                            <div class="ORstatus d-inline-block">
+                                                <h4 class="d-inline-block">OR</h4>
+                                                <h4 class="d-inline-block">: Meet Any conditions </h4>
+
+                                            </div>
+                                            <ul class="ORStatusDropdown">
+                                                <li>Commercials-invoice <a href="#"
+                                                        class="greenstyle "><span>Expression_builder</span></a>Base_shipping,
+                                                    Country_of_origin ([5,000, Syria] - [20,000, Lebanon] - [880,551,
+                                                    Jordan])</li>
+                                                <li>Commercials-invoice <a href="#"
+                                                        class="lighgreenstyle "><span>In_Group</span></a>Country-of-origin
+                                                    (Black_list, لايتم-الاستلام-منها)</li>
+                                            </ul>
+
+                                            <div class="level3">
+                                                <svg class="d-inline-block" width="24" height="24" viewBox="0 0 24 24"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.7559 14.1271C12.3572 14.5876 11.6428 14.5876 11.2441 14.1271L8.23682 10.6547C7.67594 10.007 8.136 9 8.99275 9L15.0073 9C15.864 9 16.3241 10.007 15.7632 10.6547L12.7559 14.1271Z"
+                                                        stroke="#76737C" stroke-width="1.5" />
+                                                </svg>
+
+                                                <div class="NOTstatus d-inline-block">
+                                                    <h4 class="d-inline-block">NOT</h4>
+                                                    <h4 class="d-inline-block">: Don’t Meet condition </h4>
+
+                                                </div>
+                                                <ul class="NOTStatusDropdown">
+                                                    <li>Commercials-invoice <a class="lightblue" href="#"><span><i
+                                                                    class="fa fa-bars" aria-hidden="true"></i>
+                                                                Equa</span></a>Currency (“SP”)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative"></div>
+                                <div class="Dashbored-buttons">
+                                    <ul>
+                                        <li class="close"><a href=""><i class="fas fa-circle-xmark me-2"></i>Close</a>
+                                        </li>
+                                        <li class="reload"><a href=""><i class="fas fa-arrows-rotate me-2"></i> Reload
+                                                Criteria</a></li>
+                                        <li class="New" data-bs-toggle="modal" data-bs-target="#exampleModal"><a><i
+                                                    class="fas fa-plus me-2"></i> Creat new (List popup)</a></li>
+                                        <li class="save"><a href=""><i class="fas fa-floppy-disk me-2"></i> Save</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-lg-3 col-12 graybg ">
+                            <div class="rightnav ms-3">
+                                <div class="CerterialActions mt-4  ">
+                                    <div class="CrticalTitle  mb-4">
+                                        <h5>Action on Criteria rule </h5>
+                                    </div>
+                                    <div class="CerterialActionsBtns">
+                                        <div class="actiobtn">
+                                            <a href="#"><i class="fa fa-copy"></i> Copy</a>
+
+                                        </div>
+                                        <div class="actiobtn">
+                                            <a href="#"><i class="fa fa-paste"></i> Paste</a>
+
+                                        </div>
+                                        <div class="actiobtn">
+                                            <a href="#"><i class="fa fa-pencil"></i> Edit</a>
+
+                                        </div>
+                                        <div class="actiobtn">
+                                            <a href="#"><i class="fa fa-scissors"></i> Cut</a>
+
+                                        </div>
+                                        <div class="actiobtn">
+                                            <a href="#"><i class="fa fa-trash"></i> Delete</a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="criteriarules">
+                                    <h5>Drag & drop to build criteria rule</h5>
+                                    <div class="card mt-3">
+                                        <div class="card-body p-0">
+                                            <h4>Logic Operators </h4>
+                                            <p>Drag and drop into the criteria rules box where you want</p>
+                                            <div class="logicalopeators">
+                                                <ul>
+                                                    <li class="purplestyle"><a clas href="#"><span>AND</span></a></li>
+                                                    <li class="greenstyle"><a href="#"><span>OR</span></a></li>
+                                                    <li class="redstyle"><a href="#"><span>NOT</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="criteriarules">
+                                    <div class="card mt-3">
+                                        <div class="card-body p-0">
+                                            <h4>Compare multi value</h4>
+                                            <p>Drag and drop into the criteria rules box where you want</p>
+                                            <div class="multivaluelopeators">
+                                                <ul>
+                                                    <li class="lightpurplesyle mb-2"><a
+                                                            href="#"><span>In_List</span></a></li>
+                                                    <li class="lighgreenstyle mb-2"><a href="#"><span>Expression
+                                                                builder</span></a></li>
+                                                    <li class="yellowstyle mb-2"><a href="#"><span>String
+                                                                comparer</span></a></li>
+                                                    <li class="greenstyle mb-2"><a href="#"><span>In Group</span></a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="criteriarules">
+                                    <div class="card mt-3">
+                                        <div class="card-body p-0">
+                                            <h4>Simple Compare</h4>
+                                            <p>Drag and drop into the criteria rules box where you want</p>
+                                            <div class="SimpleCompareopeators">
+                                                <ul>
+                                                    <li class="lightblue mb-2"><a href="#"><span><i
+                                                                    class="fa fa-bars me-2" aria-hidden="true"></i>
+                                                                Equa</span></a></li>
+                                                    <li class="lightblue mb-2"><a href="#"><span><i
+                                                                    class="fas fa-greater-than me-2"></i></i>
+                                                                Greater than</span></a></li>
+                                                    <li class="lightblue mb-2"><a href="#"><span><i
+                                                                    class="fas fa-less-than me-2"></i> Small
+                                                                than</span></a></li>
+
+
+                                                </ul>
+                                                <ul>
+                                                    <li class="lightblue mb-2"><a href="#"><span><i
+                                                                    class="fas fa-not-equal me-2"></i> NOT
+                                                                Equal</span></a></li>
+                                                    <li class="lightblue mb-2"><a href="#"><span> <i
+                                                                    class="fas fa-greater-than-equal me-2"> </i>Greater
+                                                                than or equal</span></a></li>
+                                                    <li class="lightblue mb-2"><a href="#"><span><i
+                                                                    class="fas fa-less-than-equal me-2"></i> Small than
+                                                                or equal</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add “In List”</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="sidebar-box search-form-wrap">
+                                <form action="#" class="search-form">
+                                    <div class="form-group">
+                                        <label>Field </label>
+                                        <svg width="440" height="40" viewBox="0 0 440 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M28.927 25.04L32.4001 28.4M23.4001 15.2C25.3883 15.2 27.0001 16.8118 27.0001 18.8M31.2801 19.44C31.2801 23.7699 27.77 27.28 23.4401 27.28C19.1102 27.28 15.6001 23.7699 15.6001 19.44C15.6001 15.1101 19.1102 11.6 23.4401 11.6C27.77 11.6 31.2801 15.1101 31.2801 19.44Z"
+                                                stroke="#494450" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <input type="text" class="form-control" id="s" placeholder="Search here...">
+                                    </div>
+                                </form>
+                                <hr>
+                                <div class="Feilds-dropdown ms-2">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <h4>Commercials-invoice</h4>
+                                    <ul>
+                                        <li><a href="">invoice-type</a></li>
+                                        <li><a href="">Country-of-raigin</a></li>
+                                        <li><a class="selected" href="">Currency</a></li>
+                                        <li><a href="">type</a></li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="Feilds-dropdown ms-2">
+                                    <i class="fas fa-chevron-down"></i>
+                                    <h4>HBItems - بنود بوليصة الشحن </h4>
+                                    <ul>
+                                        <li><a href="">trade mark</a></li>
+                                        <li><a href="">Item description</a></li>
+                                        <li><a>Date of shipment</a></li>
+                                        <li><a href="">type</a></li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="sidebar-box search-form-wrap">
+                                <form action="#" class="search-form">
+                                    <div class="form-group">
+                                        <label>List </label>
+                                        <svg width="440" height="40" viewBox="0 0 440 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M28.927 25.04L32.4001 28.4M23.4001 15.2C25.3883 15.2 27.0001 16.8118 27.0001 18.8M31.2801 19.44C31.2801 23.7699 27.77 27.28 23.4401 27.28C19.1102 27.28 15.6001 23.7699 15.6001 19.44C15.6001 15.1101 19.1102 11.6 23.4401 11.6C27.77 11.6 31.2801 15.1101 31.2801 19.44Z"
+                                                stroke="#494450" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <input type="text" class="form-control" id="s" placeholder="Search here...">
+                                    </div>
+                                </form>
+                                <hr>
+                                <div class="listcheckboxes">
+                                    <div class="form-check">
+                                        <input class="form-check-input" checked type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            AUD (Australian Dollar)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            SP (Syrian pound) </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            CHF (Swiss Franc) </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            USD (United States Dollar) </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            DKK (Danish Kroner) </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            EUR (Euro) </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            EUR </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="selectedcurrencey">
+                        <h3>Selected “Currency” from the list:</h3>
+                        <div class="selectedcurrenceylist">
+                            <ul>
+                                <li><a href="#">AUD (Australian Dollar) <i class="fas fa-xmark  mx-2"></i></a></li>
+                                <li><a href="#">SP (Syrian pound) <i class="fas fa-xmark mx-2"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <div>
+                        <button type="button" class="btn btn-primary Reset">Reset</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary"
+                            style="background-color: #2E5DD0;border: 1px solid transparent !important;">Add</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://use.fontawesome.com/724b973dd5.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>

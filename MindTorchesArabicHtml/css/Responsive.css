@@ -1,0 +1,134 @@
+
+
+@media only screen and (min-width :768px) and (max-width :991px) {
+    .sidebar-sticky {
+    
+        left: 50px !important;
+    }
+   
+  
+    .banner-menus ul li {
+        padding-right: 30px;
+    }
+   
+    .bannerContent {
+        width: 90%;
+        top: 50%;
+        left: 5%;
+    }
+    .rightnav {
+        text-align: center;
+    }
+    .CerterialActionsBtns {
+        width: 100% !important;
+    }
+    .criteriarules .card {
+        width: 329px;
+        padding: 20px 24px 0px 20px;
+        border: 1px solid #ebe6e6;
+        margin: 0 auto;
+    }
+    .Dashbored-buttons::after{
+        content: none !important;
+    }
+    main {
+        position: relative !important;
+    }
+    .sidebar {
+        position: absolute !important;
+        height: 200vh !important;
+    }
+    .vh-100
+    {
+        height: 120vh !important;
+    }
+    
+}
+
+@media only screen and (max-width :767px) {
+   .sidebar {
+    display: none !important;
+}
+
+.Dashbored-buttons ul li {
+    display: inline-block;
+    /* padding: 0px !important; */
+    margin: 20px 10px;
+    width: 141px;
+    margin-left: auto;
+    text-align: center;
+}
+.Dashbored-buttons {
+    position: inherit;
+    width: 100%;
+    display: flex;
+    z-index: 999999;
+    text-align: center;
+}
+.Dashbored-buttons a {
+    font-size: 12px;
+}
+.rightnav {
+    text-align: center;
+}
+.Dashbored-buttons::after
+{
+    content: none !important;
+}
+.graybg {
+    background-color: #F6F6F6;
+    margin-top: 35px;
+}
+.CerterialActionsBtns {
+    width: 100% !important;
+}
+.criteriarules .card {
+    margin: 0 auto;
+   }
+}
+@media only screen and (min-width :800px) and (max-width :1280px) {
+    .main .vh-100{
+        height: 120vh !important;
+    }
+    .criteriarules .card {
+        width: 274px !important;
+    }
+    .sidebar-sticky {
+        left: 80% !important;
+    }
+}
+
+@media only screen and (min-width :768px) and (max-width :1366px)
+{
+    .Dashbored-buttons {
+        position: absolute;
+        bottom: -40%;
+        left: 27%;
+        width: 100%;
+        text-align: left;
+    }
+    .main .vh-100{
+        height: 120vh !important;
+    }
+    .criteriarules .card {
+        width: 274px !important;
+    }
+    .sidebar-sticky {
+        left: 80% !important;
+    }
+}
+@media only screen and (min-width :982px) and (max-width :1512px)
+{
+    .sidebar-sticky {
+        padding-top: 190px;
+        position: relative;
+        left: 45%;
+    }
+}
+@media only screen and (min-width :1440px) and (max-width :2560px)
+{
+    .rightnav {
+        height: 100vh !important;
+    }
+}
+
